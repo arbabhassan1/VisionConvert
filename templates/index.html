@@ -1,0 +1,90 @@
+{% extends 'base.html' %} {% block title %}Home Page{% endblock %} {% block
+content %}
+<div class="container my-4">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1 class="fs-2 fw-semibold">Welcome to the Home Page</h1>
+      <div id="imageCard">
+        <img
+          id="previewImage"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTcFI6hTmgUtdxQTZktMt5KgEbySf4mtRgfQ&s"
+          class="rounded"
+          alt="Preview Image"
+        />
+      </div>
+      <form
+        action="/edit"
+        method="post"
+        enctype="multipart/form-data"
+        class="my-4 needs-validation"
+        novalidate
+      >
+        <div class="mb-3">
+          <label for="formFile" class="form-label"
+            >Select an Image to edit.</label
+          >
+          <input
+            class="form-control"
+            type="file"
+            id="formFile"
+            name="file"
+            accept="image/*"
+            required
+          />
+          <div class="invalid-feedback">Please select an image file.</div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <select
+            class="form-select"
+            id="floatingSelect"
+            aria-label="Default select example"
+            name="operation"
+            required
+          >
+            <option value="" disabled selected>Choose an Operation</option>
+            <option value="cpng">Convert to PNG</option>
+            <option value="cgray">Convert to GrayScale</option>
+            <option value="cwebp">Convert to Webp</option>
+            <option value="cjpg">Convert to Jpg</option>
+          </select>
+          <label for="floatingSelect">Select an Editing Operation</label>
+          <div class="invalid-feedback">
+            Please select an editing operation.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Convert</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  // JavaScript to handle file input and preview
+  document
+    .getElementById("formFile")
+    .addEventListener("change", function (event) {
+      var file = event.target.files[0];
+      var img = document.getElementById("previewImage");
+
+      if (file) {
+        // Check if the file is an image
+        if (file.type.startsWith("image/")) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            img.src = e.target.result;
+          };
+
+          reader.readAsDataURL(file);
+        } else {
+          alert("Please select a valid image file.");
+          event.target.value = ""; // Clear the file input
+        }
+      } else {
+        img.src = "..."; // Reset image if no file is selected
+      }
+    });
+</script>
+{% endblock %}
