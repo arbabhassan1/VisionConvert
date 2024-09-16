@@ -1,7 +1,9 @@
 <!-- templates/navbar.html -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Navbar</a>
+    <a class="navbar-brand fw-bold" href="/"
+      ><span class="text-danger fs-3">ULX</span> Converter</a
+    >
     <button
       class="navbar-toggler"
       type="button"
@@ -22,10 +24,7 @@
           <a class="nav-link" href="/about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link" href="/privacy">Privacy Policy</a>
         </li>
       </ul>
     </div>
@@ -38,10 +37,10 @@
   {% for category, message in messages %}
 
   <div
-    class="alert alert-success alert-dismissible fade show col-md-6 offset-md-3"
+    class="alert alert-success alert-dismissible fade show col-md-6 offset-md-3 my-2"
     role="alert"
   >
-    <strong>Holy guacamole!</strong>{{ message | safe }}
+    {{ message | safe }}
     <button
       type="button"
       class="btn-close"

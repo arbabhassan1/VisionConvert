@@ -1,5 +1,104 @@
 <!-- templates/index.html -->
 {% extends 'base.html' %} {% block title %}Home Page{% endblock %} {% block
 content %}
-<h1>Welcome to the About</h1>
+<!-- About Section -->
+<section class="about-section">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <h1 class="about-title">About ULX Converter</h1>
+        <p class="lead">
+          The ultimate tool for converting images into various formats with
+          ease.
+        </p>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <!-- Feature: PNG Conversion -->
+      <div class="col-md-3">
+        <div class="feature-box p-4 mb-4">
+          <i class="fas fa-file-image feature-icon mb-3"></i>
+          <h5>Convert to PNG</h5>
+          <p>
+            ULX Converter allows you to quickly and easily convert images to PNG
+            format while maintaining quality.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature: JPEG Conversion -->
+      <div class="col-md-3">
+        <div class="feature-box p-4 mb-4">
+          <i class="fas fa-image feature-icon mb-3"></i>
+          <h5>Convert to JPEG</h5>
+          <p>
+            Compress and convert your images to JPEG, perfect for web usage
+            without losing too much detail.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature: WebP Conversion -->
+      <div class="col-md-3">
+        <div class="feature-box p-4 mb-4">
+          <i class="fas fa-file-alt feature-icon mb-3"></i>
+          <h5>Convert to WebP</h5>
+          <p>
+            Use the WebP format for faster loading times on websites, without
+            compromising on image quality.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature: Grayscale Conversion -->
+      <div class="col-md-3">
+        <div class="feature-box p-4 mb-4">
+          <i class="fas fa-adjust feature-icon mb-3"></i>
+          <h5>Convert to Grayscale</h5>
+          <p>
+            Transform colorful images into elegant grayscale with a single
+            click, perfect for artistic projects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row mb-4 text-center">
+      <div class="col">
+        <h2>How ULX Converter Works</h2>
+        <p class="lead">
+          Easily convert any image into your desired format in a few simple
+          steps.
+        </p>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-4">
+        <i class="fas fa-upload fa-2x mb-3"></i>
+        <h5>1. Upload Your Image</h5>
+        <p>Choose the image you want to convert from your device.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-sync-alt fa-2x mb-3"></i>
+        <h5>2. Select Format</h5>
+        <p>
+          Select the desired output format (PNG, JPEG, WebP, Grayscale) from the
+          converter options.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-download fa-2x mb-3"></i>
+        <h5>3. Download the Result</h5>
+        <p>Download your converted image instantly with optimized quality.</p>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}

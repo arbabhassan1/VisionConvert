@@ -18,3 +18,85 @@
   /* width: 200px;
   height: 200px; */
 }
+#innovisoft:hover {
+  color: #f1c40f !important;
+  font-weight: semibold !important;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flexbox layout */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+.content {
+  flex: 1; /* Fills available space between header and footer */
+  background-color: #f1c40f;
+}
+
+footer {
+  background-color: #343a40;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  padding: 15px 0 !important;
+}
+
+.about-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #007bff;
+}
+
+.feature-box {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s;
+}
+
+.policy-section {
+  padding: 60px 0;
+}
+
+.policy-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.policy-content h5 {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.policy-content p {
+  margin-bottom: 15px;
+}
+
+.policy-list {
+  list-style-type: square;
+  padding-left: 20px;
+}

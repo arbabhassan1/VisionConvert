@@ -22,7 +22,7 @@ def processImage(filename,operation):
         case "cgray":
           imageProcessed=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
           cv2.imwrite(f"static/{filename}",imageProcessed)
-          return filename
+          return "static/"+filename
         case "cwebp":
           newFileName=f"static/{filename.split('.')[0]}.webp"
           cv2.imwrite(newFileName,img)
@@ -48,6 +48,11 @@ def index():
 @app.route("/about")
 def about():
     return render_template('about.html')
+
+
+@app.route("/privacy")
+def privacy():
+    return render_template('privacypolicy.html')
 
 @app.route("/edit" , methods=['GET', 'POST'])
 def edit():
@@ -75,4 +80,3 @@ def edit():
 
 app.run(debug=True, port=3000)
 
-# /elise-wilcox-VvuaRcjfvFQ-unsplash.png
